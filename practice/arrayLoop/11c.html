@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    
+
+
+    <script>
+      const num = [1,2,3,4,5];
+      swapnum();
+      function swapnum(){
+        let firstNum = num[0];
+        let lastNum = num[num.length-1];
+
+        num[0] = lastNum;
+        num[num.length-1] = firstNum;
+        for(let i = 0; i<num.length; i++){
+        console.log(num[i]);
+        }
+      }
+    </script>
+  </body>
+</html>

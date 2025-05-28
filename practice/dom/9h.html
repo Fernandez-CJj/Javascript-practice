@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head><title>9h</title></head>
+  <body>
+    
+    <input placeholder="Name" class="js-name" onkeyup="
+      showName(event)">
+  
+    <p class="js-result"></p>
+
+    <script>
+      function showName(){
+        let name = document.querySelector('.js-name').value;
+        document.querySelector('.js-result').innerHTML = `${name}`;
+      }
+
+      
+      
+    </script>
+  </body>
+</html>

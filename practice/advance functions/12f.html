@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12f</title>
+  </head>
+  <body>
+    <button class="js-button">Add to Cart</button>
+    <p class="js-p"></p>
+
+    <script>
+      let timeoutId;
+
+        document.querySelector('.js-button')
+        .addEventListener('click', () => {
+        const par = document.querySelector('.js-p');
+
+        par.innerHTML = 'added';
+        clearTimeout(timeoutId);
+       timeoutId = setTimeout(() => {
+          par.innerHTML = '';
+        }, 2000);
+      })
+    </script>
+  </body>
+</html>

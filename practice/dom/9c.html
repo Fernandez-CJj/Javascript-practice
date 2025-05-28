@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head><title>9c</title></head>
+  <body>
+    <button onclick="
+      flip('heads');
+      ">heads</button>
+
+    <button onclick="
+    flip('tails')
+    ">tails</button>  
+    <p class="js-result">pick something mdrkr</p>
+
+    <script>
+      function flip(value){
+        document.querySelector('.js-result').innerHTML = `you chose: ${value}`;
+      }
+    </script>
+  </body>
+</html>

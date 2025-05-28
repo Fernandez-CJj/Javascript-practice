@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <script>
+      function getPos(arr){
+        let count = 0;
+        for(let c=0; c < arr.length; c++){
+          if(arr[c] > 0){
+            count++;
+          }
+        }
+        return count;
+      }
+
+      console.log(getPos([-1,-2,-3,5,5,5,5,,55,5]));
+    </script>
+  </body>
+</html>

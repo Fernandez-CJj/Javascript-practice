@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function removeEgg(arr, egg) {
+        const result = [];
+        let count = 0;
+        arr = arr.reverse();
+        for (let c = 0; c < arr.length; c++) {
+          if (arr[c] === egg && count < 2) {
+            count++; 
+            continue;
+          }
+          result.push(arr[c]); 
+        }
+        return result.reverse();
+      }
+
+      console.log(removeEgg(['a', 'egg', 'b', 'egg', 'egg', 'c'], 'egg'));
+    </script>
+  </body>
+</html>

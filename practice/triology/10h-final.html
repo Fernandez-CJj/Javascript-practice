@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .input{
+        font-size: 15px;
+        padding: 10px;
+      }
+      .error-message{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input placeholder="input a number" class="js-input input" onkeydown="handleKeyDown(event)">
+    <p class="result"></p>
+    <p class="js-error-message error-message"></p>
+
+    <script>
+      let result;
+      function handleKeyDown(event){
+        if(event.key === 'Enter'){
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-input');
+        let cost = Number(inputElement.value)
+        
+        if(cost < 0){
+          document.querySelector('.js-error-message').innerHTML = `Input positive`;
+          document.querySelector('.result').innerHTML = ``;
+        }
+
+        else{
+          document.querySelector('.result').innerHTML = `${cost}`;
+          document.querySelector('.js-error-message').innerHTML = ``;
+        }
+      }
+      
+    </script>
+  </body>
+</html>

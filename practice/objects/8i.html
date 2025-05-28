@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flip Coin</title>
+</head>
+<body>
+    <button onclick="
+        playGame('heads')">heads</button>
+
+    <button onclick="
+        playGame('tails')">tails</button>
+
+    <script> 
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0
+        };
+    
+        function playGame(guess){
+            const randomNumber = Math.random();
+            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+            if (result === 'heads' && guess === 'heads') {
+                score.wins++;
+            } else if (result === 'tails' && guess === 'tails') {
+                score.wins++;
+            } else {
+                score.losses++;
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+            console.log(result === guess ? 'you win!' : 'you lose!');
+            console.log(`wins: ${score.wins} losses: ${score.losses}`);
+        }
+    </script>
+
+
+</body>
+</html>
