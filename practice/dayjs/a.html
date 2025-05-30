@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head><title>A to B</title></head>
+
+  <body>
+    <script type="module">
+       import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+
+       const today = dayjs();
+       let date = today.add(5, 'days');
+       console.log(date.format('MMMM, D'));
+
+       date = today.add(1, 'month');
+       console.log(date.format('MMMM, D'));
+
+        date = today.add(-1, 'month');
+       console.log(date.format('MMMM, D'));
+
+        console.log(today.format('dddd'));
+    </script>
+  </body>
+</html>
